@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+const fetchPost = async () => {
+
+const data = JSON.stringify({
+   a: "aaa",
+   b: "bbb",
+})        
+
+const options = {
+   method: "POST",
+   body: data
+};    
+
+const response = await fetch("/login", options)
+   if (!response.ok)
+      return response.status
+   else
+      return await response.text() // lub response.json()
+
+}
+    </script>
+</head>
+<body>
+    wahoo
+    <button onclick="fetchPost()">
+        testbtn
+    </button>
+</body>
+</html>
